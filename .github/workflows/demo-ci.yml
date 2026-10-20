@@ -1,0 +1,20 @@
+name: LawFirm Demo CI
+
+on:
+  push:
+    branches:
+      - demo/vercel-static-prototype
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  syntax-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check demo JavaScript
+        run: npm run check
