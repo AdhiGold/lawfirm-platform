@@ -1,0 +1,15 @@
+name = "lawfirm"
+description = "LawFirm multi-tenant legal practice SaaS platform"
+
+[auth]
+enabled = true
+providers = ["email"]
+login_path = "/login"
+
+[db.tables.lawfirm_memberships]
+read = "own"
+write = "own"
+
+[db.tables.lawfirm_partner_profiles]
+read = "own"
+write = "own"
