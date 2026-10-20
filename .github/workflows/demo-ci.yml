@@ -18,3 +18,5 @@ jobs:
           node-version: 22
       - name: Check demo JavaScript
         run: npm run check
+
+# CI validates the static demo JavaScript only; no production services are required.
