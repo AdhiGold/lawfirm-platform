@@ -1,0 +1,11 @@
+{
+  "name": "lawfirm-platform-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "LawFirm interactive frontend demo",
+  "scripts": {
+    "check:ui": "node --check public/app.js",
+    "check": "npm run check:ui"
+  }
+}
