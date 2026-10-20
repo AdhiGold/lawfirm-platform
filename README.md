@@ -1,22 +1,27 @@
-# LawFirm — Legal Practice Ecosystem
+# LawFirm — Interactive Demo
 
-Dark navy and gold multi-tenant legal practice SaaS prototype.
+This branch is the **demo-only** version of LawFirm, prepared for a static Vercel deployment similar to the MAKNA demo workflow.
 
-## Structure
+## Demo behavior
 
-- `public/` — client UI for dashboard, login, registration, styles, and browser application.
-- `api/` — account, onboarding, partner, and platform-admin endpoints.
-- `migrations/` — SQL schema and SaaS plan seed migrations.
-- `hatchable.toml` — Hatchable application/auth configuration.
+- Static HTML, CSS, and browser JavaScript.
+- Demo login and registration with role selection.
+- Dashboard, matters, clients, calendar, tasks, documents, billing, reports, partner and LawFirm Core screens use sample data.
+- Demo profile and small changes may be kept in the current browser via `localStorage`.
+- No production database, real email verification, payment processing, or production authentication is configured.
+- Do not enter real client, matter, or privileged legal data.
 
-## Current scope
+## Vercel setup
 
-This repository contains the LawFirm prototype and SaaS foundation. Operational matter, client, billing, and document records still use demonstration data in the frontend and are not yet production-ready tenant-scoped CRUD workflows.
+- Framework preset: Other
+- Root directory: repository root (`./`)
+- Build command: leave empty
+- Output directory: `public`
+- Install command: leave empty; there are no runtime dependencies
+- Validate this branch as the demo deployment. Do not point production to `main` unless explicitly intended.
 
-## Pricing seed plans
+`vercel.json` enables clean URLs so `/login` and `/register` map to their static HTML pages.
 
-- Starter — IDR 499,000/month
-- Professional — IDR 1,499,000/month
-- Business — IDR 3,499,000/month
+## Important
 
-Do not commit production secrets or credentials.
+The original Hatchable implementation remains on `main`. This branch is intentionally a separate demo path and is not a production-ready legal SaaS backend.
