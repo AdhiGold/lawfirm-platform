@@ -1,0 +1,12 @@
+{
+  "name": "lawfirm-platform",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "LawFirm legal practice SaaS — staged Hatchable to Vercel migration",
+  "scripts": {
+    "check:ui": "node --check public/app.js",
+    "check:api": "node --check api/account/me.js && node --check api/account/profile.js && node --check api/core/overview.js && node --check api/core/partner-status.js && node --check api/onboarding/lawfirm.js && node --check api/onboarding/partner.js && node --check api/partner/me.js",
+    "check": "npm run check:ui && npm run check:api"
+  }
+}
